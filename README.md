@@ -18,8 +18,8 @@ When a client places an order, the process flows through several services in an 
 
 ```text
                         ┌──────────────────┐
-                        │      Client       │
-                        │   / Postman       │
+                        │      Client      │
+                        │   / Postman      │
                         └────────┬─────────┘
                                  │
                                  ▼
