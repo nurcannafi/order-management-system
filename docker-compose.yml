@@ -106,6 +106,20 @@ services:
     depends_on:
       - kafka
 
+  postgres-user:
+    image: postgres:16
+    container_name: postgres-user
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: userdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5439:5432"
+    volumes:
+      - postgres-user-data:/var/lib/postgresql/data
+
 volumes:
+  postgres-user-data:
   postgres-order-data:
   postgres-inventory-data:
